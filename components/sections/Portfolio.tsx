@@ -18,7 +18,7 @@ export default function Portfolio() {
         {projects.map((project, i) => (
           <motion.a
             key={project.slug}
-            href={project.url}
+            href={`/projects/${project.slug}`}
             target="_blank"
             rel="noopener noreferrer"
             data-cursor-explore
