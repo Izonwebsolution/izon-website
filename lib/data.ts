@@ -90,6 +90,7 @@ export type Project = {
   description: string;
   tech: string[];
   url?: string;
+  liveUrl?: string;
   image: string;
   gallery?: string[];
   overview: string;
@@ -105,7 +106,8 @@ export const projects: Project[] = [
     description:
       "A modern business website designed to establish an online presence and communicate the brand professionally.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    url: "https://avantis-infinity-mushroom.vercel.app/",
+    url: "/projects/avantis-infinity",
+liveUrl: "https://avantis-infinity-mushroom.vercel.app/",
 image: "/projects/avantis/avantis-1.png",
 gallery: [
   "/projects/avantis/avantis-1.png",
