@@ -90,6 +90,8 @@ export type Project = {
   description: string;
   tech: string[];
   url?: string;
+  image: string;
+  gallery?: string[];
   overview: string;
   challenge: string;
   solution: string;
@@ -104,6 +106,12 @@ export const projects: Project[] = [
       "A modern business website designed to establish an online presence and communicate the brand professionally.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     url: "https://avantis-infinity-mushroom.vercel.app/",
+image: "/projects/avantis/avantis-1.png",
+gallery: [
+  "/projects/avantis/avantis-1.png",
+  "/projects/avantis/avantis-2.png",
+  "/projects/avantis/avantis-3.png"
+],
     overview:
       "Avantis Infinity needed a professional web presence that reflected the credibility of the business to new visitors.",
     challenge:

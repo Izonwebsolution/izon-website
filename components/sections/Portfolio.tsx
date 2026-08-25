@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/lib/data";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -27,21 +28,17 @@ export default function Portfolio() {
             transition={{ duration: 0.5, delay: i * 0.08 }}
             className="group block overflow-hidden rounded-2xl border border-white/8 bg-panel/50"
           >
-            <div className="relative flex h-64 items-center justify-center overflow-hidden bg-gradient-to-br from-dusk/25 via-ink to-teal/10">
-              <div className="glass w-3/4 rounded-lg p-3 shadow-glass transition-transform duration-500 group-hover:-translate-y-2">
-                <div className="flex gap-1.5 pb-2">
-                  <span className="h-2 w-2 rounded-full bg-coral/70" />
-                  <span className="h-2 w-2 rounded-full bg-gold/70" />
-                  <span className="h-2 w-2 rounded-full bg-teal/70" />
-                </div>
-                <div className="h-2 w-2/3 rounded-full bg-white/15" />
-                <div className="mt-2 h-16 rounded-md bg-white/5" />
-              </div>
-              <div className="glass absolute bottom-4 right-4 w-16 rounded-md p-1.5 shadow-glass">
-                <div className="h-2 w-1/2 rounded-full bg-white/15" />
-                <div className="mt-1.5 h-8 rounded bg-white/5" />
-              </div>
-            </div>
+            <div className="relative h-64 overflow-hidden bg-ink">
+  <Image
+    src={project.image}
+    alt={`${project.name} website preview`}
+    fill
+    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+    sizes="(max-width: 1024px) 100vw, 50vw"
+  />
+
+  <div className="absolute inset-0 bg-gradient-to-t from-midnight/40 via-transparent to-transparent opacity-60" />
+</div>
 
             <div className="p-6">
               <div className="flex items-center justify-between">

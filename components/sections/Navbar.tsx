@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
@@ -43,9 +44,16 @@ export default function Navbar() {
             scrolled ? "glass shadow-glass" : "bg-transparent"
           }`}
         >
-          <a href="#home" className="font-display text-lg font-semibold tracking-[0.25em] text-cloud">
-            IZON
-          </a>
+          <a href="#home" className="flex items-center">
+  <Image
+    src="/logo/izon-logo.png"
+    alt="IZON"
+    width={90}
+    height={40}
+    className="h-10 w-auto object-contain"
+    priority
+  />
+</a>
 
           <ul className="hidden items-center gap-8 lg:flex">
             {links.map((link) => (
@@ -89,7 +97,15 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] flex flex-col bg-midnight px-6 py-6"
           >
             <div className="flex items-center justify-between">
-              <span className="font-display text-lg font-semibold tracking-[0.25em]">IZON</span>
+              <a href="#home" onClick={() => setOpen(false)}>
+  <Image
+    src="/logo/izon-logo.png"
+    alt="IZON"
+    width={90}
+    height={40}
+    className="h-10 w-auto object-contain"
+  />
+</a>
               <button
                 onClick={() => setOpen(false)}
                 className="rounded-full border border-white/10 p-2"
